@@ -10,11 +10,12 @@ country = df.iloc[:,0]
 map_version = {}  #定义空字典
 for i in range(len(country)):
     name = country[i]   #国家名
-    data = datas[i]   #该国家疫情人数
+    data = datas[i]   #该国家苹果产量
     if name in map_version:
         map_version[name] = int(data)  + map_version[name]
     else:
-        map_version[name] = int(data)  #将国家和人数以键值对的形式传入字典
+        map_version[name] = int(data)  #将国家和产量
+     以键值对的形式传入字典
  
 element = list(map_version.items())
 # rgb(135,206,250)
